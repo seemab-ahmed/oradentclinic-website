@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "framer-motion": "^12.10.5",
+    "framer-motion": "^11.11.17",
     "next": "15.3.1",
     "react": "^19.0.0",
     "react-compare-image": "^3.5.4",

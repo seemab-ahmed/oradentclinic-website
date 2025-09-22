@@ -16,7 +16,7 @@ export default function AboutSection({
 }) {
   return (
     <section className="py-10">
-      <div className="container w-full max-w-[1400px] lg:max-w-[1337px] mx-auto px-4">
+      <div className="container w-full max-w-[1400px] mx-auto px-4">
       <div className={`flex flex-col lg:flex-row gap-10 ${reverse ? 'lg:flex-row-reverse' : ''}`}>
           {/* Text Section */}
           <div className="lg:w-7/12">

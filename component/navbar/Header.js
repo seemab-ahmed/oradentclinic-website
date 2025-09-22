@@ -171,14 +171,14 @@ const Header = () => {
                 priority
               />
             </div>
-              <a
+              <Link
          href="https://wa.me/923249134745?text=*I8%20Branch*%0AHello%2C%20I%20am%20interested%20in%20booking%20a%20dental%20appointment."
         target="_blank"
         rel="noopener noreferrer"
               className="text-[20px] font-medium leading-5 font-jost  px-5 py-3 text-white bg-[#075791] hover:bg-[#85c441] transition-colors"
             >
               Appointment
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -7,7 +7,7 @@ import Link from "next/link";
 const DentistCard = ({ name, qualifications, image }) => {
   return (
     <div data-aos="fade-up" className="bg-white shadow-lg rounded overflow-hidden flex flex-col justify-between relative">
-      <div className="relative w-full h-92 min-h-[320px]">
+      <div className="relative w-full h-92 min-h-[350px]">
         <Image
           src={image}
           alt={name}
@@ -27,9 +27,11 @@ const DentistCard = ({ name, qualifications, image }) => {
             {qual}
           </p>
         ))}
-        <div className="absolute top-[-10px] left-4/12">
+        <div className="mt-4.5 mb-2">
           <Link
-            href="/appointment"
+             href="https://wa.me/923249134745?text=*I8%20Branch*%0AHello%2C%20I%20am%20interested%20in%20booking%20a%20dental%20appointment."
+              target="_blank"
+              rel="noopener noreferrer"
             className="text-base font-medium leading-5 font-jost px-5 py-2.5 text-white bg-[#075791] hover:bg-[#85c441] transition-colors"
           >
             Appointment

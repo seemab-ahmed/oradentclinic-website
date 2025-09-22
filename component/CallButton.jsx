@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -7,26 +7,26 @@ const CallButton = () => {
 
   const handleClick = () => {
     setClicked(true);
-    // Optional: add timeout to reset
-    // setTimeout(() => setClicked(false), 2000);
   };
 
   return (
-    <div className="fixed left-12 bottom-[115px] z-50">
+    <div className="fixed left-6 bottom-5 sm:bottom-[40px] z-50">
       <a
         href="tel:+923249134745"
         onClick={handleClick}
-        className={`bg-opacity-70 rounded-full flex items-center justify-center w-[66px] h-[66px] border-3 transition-colors ${
-          clicked ? 'border-[#85c441]' : 'border-[#b5db8a]'
-        }`}
+        className={`bg-opacity-70 rounded-full flex items-center justify-center transition-colors 
+          ${clicked ? "border-[#85c441]" : "border-[#b5db8a]"}
+          border-2 
+          w-[37px] h-[37px] sm:w-[58px] sm:h-[58px]`}
       >
-        <Image
-          src="/images/callIconn.png"
-          alt="Call"
-          width={70}
-          height={70}
-          className="z-100"
-        />
+        <div className="relative w-[35px] h-[35px] sm:w-[56px] sm:h-[56px]">
+          <Image
+            src="/images/callIconn.png"
+            alt="Call"
+            fill
+            className="object-contain"
+          />
+        </div>
       </a>
     </div>
   );

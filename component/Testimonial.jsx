@@ -54,7 +54,8 @@ const Testimonial = () => {
     <div className="absolute inset-0 z-0 bg-[#051e42] opacity-80"/>
   
     {/* Content layer */}
-    <div className="relative z-10 max-w-2xl mx-auto">
+    <div className="relative z-10 max-w-3xl mx-auto">
+      <h2 className="text-3xl sm:text-5xl leading-snug py-8 font-bold font-jost text-white text-center mb-6">What Our Patients Are Saying About Us</h2>
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}

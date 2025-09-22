@@ -22,28 +22,25 @@ const AppointmentSection = () => {
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Left Column */}
           <div
-           data-aos="fade-right"
            className="lg:w-1/2 pt-5">
-            <h1 className="mb-5 text-white text-[1.3rem] sm:text-[1.8rem] md:text-[2.5rem] font-jost font-bold">
-              Why Choose Us?
-            </h1>
-            <p className="text-white text-sm md:text-[1rem] font-openSans leading-6 tracking-[0.6px]">
-              OraDent Dental Clinic Provides top notch dental services, never
-              compromising on the health, hygiene and comfort of its patients.
-              We offer expertiese in a diverse spectrum of dental problem and
-              oral surgery. OraDent Dental Clinic aims to provide the highest
-              level of dental treatment by utilising the most appropriate and
-              cost effective solution using infection control protocols
-              following all the guidelines provided by WHO and PMC. We are a
-              team of highly certified and Professional Staff and it is our
-              utmost responsibility to listen to yours concerns and give you the
-              most appropriate, cost effective treatment plan that you
-              understand and agree with.
+            <h3 className="mb-3 text-white text-[1.1rem] sm:text-[1.4rem] md:text-[1.8rem] font-jost font-semibold">
+              Why Choose Us
+            </h3>
+            <p className="text-white text-sm md:text-[1rem] font-openSans leading-6 tracking-[0.6px] mb-4">
+              Patient comfort is our priority, and we utilize advanced technology for accurate diagnosis and precise treatments, guaranteeing the highest standard of care.
             </p>
+
+            <ul className="list-disc list-inside text-white space-y-2">
+              <li>7+ Years of Excellence in Dental Services</li>
+              <li>Team of 8+ Renowned Dentists with all dental specialties</li>
+              <li>2 Branches in Islamabad</li>
+              <li>1000+ Happy Patients</li>
+              <li>In-House Dental Lab</li>
+            </ul>
           </div>
 
            <div
-            data-aos="fade-left"
+            data-aos="zoom-in"
            className="lg:w-1/2 py-5 flex items-center">
     <AppointmentForm branch="I8" whatsappNumber="923249134745" />
   </div>

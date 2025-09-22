@@ -12,6 +12,8 @@ import Testimonial from '@/component/Testimonial';
 import DentalServices from '@/component/DentalServices';
 import WhatsappButton from '@/component/Whatsapp';
 import CallButton from '@/component/CallButton';
+import AboutI8Branch from '@/component/AboutI8Branch';
+import FAQSection from '@/component/Faqs';
 
 export default function Home() {
   return (
@@ -38,15 +40,17 @@ export default function Home() {
       </Head>
       {/* <Carousel /> */}
       <WorkingHours />
-      <AppointmentSection />
+      <AboutI8Branch />
       <SmileSection />
       <About />
       <DentalServices />
       <Testimonial />
       <SocialReviewsSection />
       <DentistTeam />
-      <WhatsappButton/>
-      <CallButton/>
+      <WhatsappButton />
+      <CallButton />
+      <AppointmentSection />
+      <FAQSection />
       <BlogSection />
     </>
   );

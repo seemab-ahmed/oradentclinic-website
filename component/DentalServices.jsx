@@ -73,7 +73,7 @@ export default function DentalServices() {
     <div className="py-10 md:py-28">
       <div className="flex flex-col lg:flex-row gap-12 container w-full max-w-[1400px] mx-auto px-4">
         {/* 🟦 Professional Before/After Slider */}
-        <div className="w-full lg:w-5/12" data-aos="zoom-in-left">
+        <div className="w-full lg:w-5/12" data-aos="fade-down">
           <div className="rounded overflow-hidden shadow-md">
             <CompareSlider
               leftImage={Before.src}
@@ -87,20 +87,22 @@ export default function DentalServices() {
         </div>
 
         {/* 🟩 Services Header + First Two */}
-        <div className="w-full lg:w-7/12">
-          <div className="mb-5" data-aos="zoom-in-left">
-            <h5 className="text-[#075791] font-jost font-medium text-[1rem] lg:text-[1.25rem] uppercase mb-2">Our Services</h5>
-            <h1 className="text-[1.5rem] md:text-[2rem] lg:text-[3rem] font-bold font-jost leading-snug text-[#091e3e]">We Offer The Best Quality Dental Services</h1>
+        <div className="w-full max-w-[1400px]">
+          <div className="mb-5" data-aos="fade-down">
+            <h2 className="text-[#075791] font-jost text-[1.5rem] md:text-[2rem] lg:text-5xl font-bold uppercase mb-2">Our Dental Services</h2>
+            <p className="mb-4 italic text-[#6b6a75] font-semibold text-[1rem] md:text-[1.2rem] lg:text-[1.5rem] font-jost ">At Oradent Dental Clinic, we provide complete dental care for the whole family. Whether you 
+need a simple checkup, a filling, or a more advanced treatment, our team is here to guide you 
+with care and comfort.</p>
           </div>
           <div className="grid grid-cols-1 gap-5">
             {services.slice(0, 2).map((service, idx) => (
               <Link key={idx} href={service.link}>
-                <div className="flex rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-aos="zoom-in-left">
+                <div className="flex rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-aos="fade-down">
                   <div className="w-1/3">
                     <Image src={service.img} alt={service.title} width={300} height={200} className="object-cover w-full h-full" />
                   </div>
                   <div className="w-2/3 bg-gray-100 p-4">
-                    <h5 className="font-semibold font-jost text-[1rem] md:text-[1.25rem] text-[#091e3e]">{service.title}</h5>
+                    <h3 className="font-semibold font-jost text-[1rem] md:text-[1.25rem] text-[#091e3e]">{service.title}</h3>
                     <p className="text-sm text-[#0dbaed]">{service.desc}</p>
                   </div>
                 </div>
@@ -111,15 +113,15 @@ export default function DentalServices() {
       </div>
 
       {/* 🟨 Remaining Services */}
-      <div className="grid md:grid-cols-2 gap-12 mt-10 container w-full max-w-[95%] lg:max-w-[84%] mx-auto px-4">
+      <div className="grid md:grid-cols-2 gap-12 mt-10 container w-full max-w-[1400px] mx-auto px-4">
         {services.slice(2).map((service, idx) => (
           <Link key={idx} href={service.link}>
-            <div className="flex rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-aos="zoom-in-left">
+            <div className="flex rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-aos="fade-down">
               <div className="w-1/3">
                 <Image src={service.img} alt={service.title} width={300} height={200} className="object-cover w-full h-full" />
               </div>
               <div className="w-2/3 bg-gray-100 p-4">
-                <h5 className="font-semibold font-jost text-[1rem] md:text-[1.25rem] text-[#091e3e]">{service.title}</h5>
+                <h3 className="font-semibold font-jost text-[1rem] md:text-[1.25rem] text-[#091e3e]">{service.title}</h3>
                 <p className="text-sm text-[#0dbaed]">{service.desc}</p>
               </div>
             </div>

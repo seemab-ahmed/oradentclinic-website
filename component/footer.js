@@ -25,20 +25,20 @@ const Footer = () => {
           ]
         },
         {
-          title: "I-8 Markaz Branch",
+          title: "OraDent Dental Clinic Islamabad (I8)",
           type: "branch",
           links: [
-            { text: "Office No 7, Pakland Business Center Behind Allied Bank I-8 Markaz, Islamabad." },
+            { text: "Shop No. 7, Pakland Business Center Behind Allied Bank I-8 Markaz, Islamabad." },
             { text: "info@oradentdentalclinic.com", href: "mailto:info@oradentdentalclinic.com" },
             { text: "+923249134745", href: "tel:+923249134745" },
             { text: "+051 2707333", href: "tel:+0512707333" }
           ]
         },
         {
-          title: "F-8 Markaz Branch",
+          title: "OraDent Dental Clinic Islamabad (F8)",
           type: "branch",
           links: [
-            { text: "Office No 14, Ground Floor Hashim Plaza Near Medcity Hospital F-8 Markaz, Islamabad.", href: "/" },
+            { text: "Office No. 14, Ground Floor, Hashim Palaza, Near MidCity Hospital, F-8Markaz, Islamabad", href: "/" },
             { text: "oradentdentalclinicf8@gmail.com", href: "mailto:oradentdentalclinicf8@gmail.com" },
             { text: "+923065393039", href: "tel:+923065393039" },
             { text: "+051 2744915", href: "tel:+0512744915" }

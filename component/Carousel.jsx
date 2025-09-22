@@ -10,8 +10,8 @@ const slides = [
   {
     src: slider1,
     title:  "Proudly Serving Patients in Two Prime locations",
-    btntextleft: "I-8 Islamabad",
-    btntextright: "F8 Islamabad",
+    btntextleft: "F-8 Islamabad",
+    btntextright: "I-8 Islamabad",
   },
   {
     src: slider2,
@@ -21,8 +21,8 @@ const slides = [
       Dental Clinic In <br /> Islamabad
     </>
   ),
-    btntextleft: "Appointment",
-    btntextright: "Contact Us",
+  btntextleft: "Appointment",
+  btntextright: "Call Us",
   },
 ];
 
@@ -67,13 +67,13 @@ const Carousel = () => {
         >
           {slides[current].title}
         </h1>
+        <p className="text-white font-xl">Trusted by families across Islamabad for quality care, modern treatments, and lasting smiles</p>
         <div className="mt-6 flex flex-row gap-3 md:gap-4 justify-center items-center">
-          <button className="px-1 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base font-semibold bg-[#075791] text-white hover:bg-[#85c441] transition duration-300 w-30 sm:w-40 md:w-50
-          ">
-            {slides[current].btntextleft}
-          </button>
-          <button className="px-1 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base font-semibold bg-[#85c441] text-white hover:bg-[#075791] transition duration-300 w-30 sm:w-40 md:w-50">
+           <button className="px-1 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base font-semibold bg-[#85c441] text-white hover:bg-[#075791] transition duration-300 w-30 sm:w-40 md:w-50">
             {slides[current].btntextright}
+          </button>
+          <button className="px-1 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base font-semibold bg-[#075791] text-white hover:bg-[#85c441] transition duration-300 w-30 sm:w-40 md:w-50">
+            {slides[current].btntextleft}
           </button>
         </div>
       </div>

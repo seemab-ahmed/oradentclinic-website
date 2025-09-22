@@ -7,15 +7,11 @@ export default function TopBar() {
     return (
         <div className="flex items-center justify-between bg-[#045C94] lg:bg-[#def4ff]">
             <div className=" hidden lg:flex items-center space-x-1 pl-1 sm:pl-12">
-              <Image
-                src={ClockIcon} 
-                alt="Mail Icon"
-                width={16}
-                height={16}
-              />
+              <a href="https://share.google/XZYdHv3UhfVGZ6tBW">
               <span className="text-sm">
-                Opening Hours: Mon - Sun : 11.00 am - 09.30 pm
+                Office No 14, Ground Floor, Hashim Plaza, F-8 Markaz, Islamabad
               </span>
+              </a>
             </div>
             <div className='flex'>
           {/* Green angled SVG */}
@@ -32,15 +28,11 @@ export default function TopBar() {
     
           <div className="flex flex-wrap gap-2 justify-center items-center bg-[#045C94] text-white pl-1 sm:pl-4 pr-1 sm:pr-12 py-2 space-x-8">
             <div className="flex items-center space-x-2">
-              <Image
-                src={MailIcon} 
-                alt="Mail Icon"
-                width={16}
-                height={16}
-              />
+              <a href="https://share.google/aPUNO0fTSB4Y17rEV">
               <span className="text-sm">
-                oradentmaxillofacialandsurgery@gmail.com
+                Shop No #07, Pakland Business Center, I-8 Markaz Islamabad
               </span>
+              </a>
             </div>
             <div className="flex items-center space-x-2">
               <Image

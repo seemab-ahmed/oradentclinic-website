@@ -120,7 +120,7 @@ const Carousel = () => {
                   target={slide.btnlinkright.startsWith("http") ? "_blank" : "_self"}
                   rel="noopener noreferrer"
                 >
-                  <button className="px-1 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base font-semibold bg-[#85c441] text-white hover:bg-[#075791] transition duration-300 w-28 sm:w-40 md:w-48 rounded-lg shadow-lg">
+                  <button className="px-2 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-base sm:text-base font-semibold bg-[#85c441] text-white hover:bg-[#075791] transition duration-300 w-34 sm:w-40 md:w-48 sm:rounded-lg shadow-lg">
                     {slide.btntextright}
                   </button>
                 </Link>
@@ -130,7 +130,7 @@ const Carousel = () => {
                   target={slide.btnlinkleft.startsWith("http") ? "_blank" : "_self"}
                   rel="noopener noreferrer"
                 >
-                  <button className="px-1 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base font-semibold bg-[#075791] text-white hover:bg-[#85c441] transition duration-300 w-28 sm:w-40 md:w-48 rounded-lg shadow-lg">
+                  <button className="px-2 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-base sm:text-base font-semibold bg-[#075791] text-white hover:bg-[#85c441] transition duration-300 w-34 sm:w-40 md:w-48 sm:rounded-lg shadow-lg">
                     {slide.btntextleft}
                   </button>
                 </Link>

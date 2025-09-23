@@ -10,57 +10,12 @@ import MailIcon from "@/public/images/icons/mailIcon.png"
 import PhoneIcon from "@/public/images/icons/phoneIcon.png"
 import OnlinePaymentSection from "./OnlinePaymentSection";
 
-
-
 const Footer = () => {
-    const footerLinks = [
-        {
-          title: "Quick Links",
-          type: "nav",
-          links: [
-            { text: "Home", href: "/" },
-            { text: "About Us", href: "/" },
-            { text: "Our Services", href: "/" },
-            { text: "Contact Us", href: "/" }
-          ]
-        },
-        {
-          title: "OraDent Dental Clinic Islamabad (I8)",
-          type: "branch",
-          links: [
-            { text: "Shop No. 7, Pakland Business Center Behind Allied Bank I-8 Markaz, Islamabad." },
-            { text: "info@oradentdentalclinic.com", href: "mailto:info@oradentdentalclinic.com" },
-            { text: "+923249134745", href: "tel:+923249134745" },
-            { text: "+051 2707333", href: "tel:+0512707333" }
-          ]
-        },
-        {
-          title: "OraDent Dental Clinic Islamabad (F8)",
-          type: "branch",
-          links: [
-            { text: "Office No. 14, Ground Floor, Hashim Palaza, Near MidCity Hospital, F-8Markaz, Islamabad", href: "/" },
-            { text: "oradentdentalclinicf8@gmail.com", href: "mailto:oradentdentalclinicf8@gmail.com" },
-            { text: "+923065393039", href: "tel:+923065393039" },
-            { text: "+051 2744915", href: "tel:+0512744915" }
-          ]
-        },
-        {
-          title: "Follow Us",
-          type: "social",
-          links: [
-            { icon: FacebookIcom, href: "https://facebook.com" },
-            { icon: InstagramIcon, href: "https://instagram.com" }
-          ]
-        }
-      ];
-      
-
   return (
     <div data-aos="fade-up" className="w-full bg-[#091e3e] relative mt-[180px] md:mt-[150] lg:mt-[180px]">
       <div className="max-w-[1400px] mx-auto px-4 lg:max-w-[1337px] pt-22 py-10">
-        {/* <h3 className="text-2xl md:text-3xl text-white font-jost font-bold text-center mb-8">Visit Our Clinic Near You</h3> */}
-
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+          
           {/* Quick Links */}
           <div>
             <h4 className="text-lg text-white font-jost mb-4 font-semibold">Quick Links</h4>
@@ -77,7 +32,14 @@ const Footer = () => {
             <h4 className="text-lg text-white font-jost mb-4 font-semibold">OraDent Dental Clinic Islamabad (I8)</h4>
             <div className="flex items-start gap-3">
               <Image src={LocationIcon} alt="location" width={18} height={18}/>
-              <div className="text-white text-sm">Shop No. 7, Pakland Business Center, Behind Allied Bank, I-8 Markaz, Islamabad</div>
+              <Link 
+                href="https://share.google/aPUNO0fTSB4Y17rEV" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white text-sm"
+              >
+                Shop No. 7, Pakland Business Center, Behind Allied Bank, I-8 Markaz, Islamabad
+              </Link>
             </div>
             <div className="flex items-start gap-3 mt-3">
               <Image src={PhoneIcon} alt="phone" width={18} height={18}/>
@@ -99,7 +61,14 @@ const Footer = () => {
             <h4 className="text-lg text-white font-jost mb-4 font-semibold">OraDent Dental Clinic Islamabad (F8)</h4>
             <div className="flex items-start gap-3">
               <Image src={LocationIcon} alt="location" width={18} height={18}/>
-              <div className="text-white text-sm">Office No. 14, Ground Floor, Hashim Plaza, Near MidCity Hospital, F-8 Markaz, Islamabad</div>
+              <Link 
+                href="https://share.google/XZYdHv3UhfVGZ6tBW" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white text-sm"
+              >
+                Office No. 14, Ground Floor, Hashim Plaza, Near MidCity Hospital, F-8 Markaz, Islamabad
+              </Link>
             </div>
             <div className="flex items-start gap-3 mt-3">
               <Image src={PhoneIcon} alt="phone" width={18} height={18}/>
@@ -136,7 +105,7 @@ const Footer = () => {
         </span>
       </div>
    
-    <OnlinePaymentSection/>
+      <OnlinePaymentSection/>
     </div>
   );
 };

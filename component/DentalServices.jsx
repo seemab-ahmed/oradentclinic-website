@@ -70,7 +70,7 @@ export default function DentalServices() {
   ];
 
   return (
-    <div className="py-10 md:py-28">
+    <div className="py-10 md:py-28 bg-white">
       <div className="flex flex-col lg:flex-row gap-12 container w-full max-w-[1400px] mx-auto px-4">
         {/* 🟦 Professional Before/After Slider */}
         <div className="w-full lg:w-5/12" data-aos="fade-down">

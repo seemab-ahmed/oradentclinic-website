@@ -76,7 +76,7 @@ const Carousel = () => {
   }, [current, extendedSlides.length]);
 
   return (
-    <div className="">
+    <div className=" bg-white">
       <div className="w-full">
         <marquee
           direction="left"

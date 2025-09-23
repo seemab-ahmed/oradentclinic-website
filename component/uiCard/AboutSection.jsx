@@ -15,7 +15,7 @@ export default function AboutSection({
   reverse = false,
 }) {
   return (
-    <section className="py-10">
+    <section className="py-10 bg-white">
       <div className="container w-full max-w-[1400px] mx-auto px-4">
       <div className={`flex flex-col lg:flex-row gap-10 ${reverse ? 'lg:flex-row-reverse' : ''}`}>
           {/* Text Section */}

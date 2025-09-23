@@ -31,7 +31,7 @@ const reviews = [
 export default function socialReviewsSection() {
   return (
     <section
-      className="relative py-12 md:py-36 bg-cover bg-center bg-no-repeat"
+      className="relative py-12 md:py-36 bg-cover bg-center bg-no-repeat bg-white"
       style={{ backgroundImage: `url(${ReviewBg.src})` }}
     >
       {/* <div className="absolute inset-0 bg-gray-400 bg-opacity-0 z-0"></div> */}

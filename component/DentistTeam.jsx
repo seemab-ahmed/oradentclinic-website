@@ -99,7 +99,7 @@ const DentistTeam = () => {
           {/* Title Section */}
           <div
             data-aos="zoom-in"
-            className="bg-gray-100 p-6 rounded shadow h-[630px]"
+            className="bg-gray-100 p-6 rounded shadow h-[380px] md:h-[630px]"
           >
             <h5 className="text-[#075791] uppercase font-bold mb-2 pt-4">
               Our Dentist

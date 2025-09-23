@@ -5,7 +5,7 @@ import AppointmentForm from "./uiCard/AppointmentForm";
 
 const AppointmentSection = () => {
   return (
-    <div className="relative my-5 md:my-20 text-white">
+    <div className="relative my-5 md:my-20 text-white bg-white">
       {/* Background Image Layer */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"

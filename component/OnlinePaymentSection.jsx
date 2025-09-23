@@ -27,7 +27,7 @@ import Image from "next/image";
 
 const OnlinePaymentSection = () => {
   return (
-    <div data-aos="fade-up" className="z-40 pt-5 w-full absolute top-[-80px] sm:top-[-160px] md:top-[-170px] lg:top-[-90px]">
+    <div data-aos="fade-up" className="z-40 bg-white pt-5 w-full absolute top-[-80px] sm:top-[-160px] md:top-[-170px] lg:top-[-90px]">
       <div className=" max-w-[1400px] lg:max-w-[1310px] mx-auto px-0 md:px-4 bg-[#075791]">
         <div className="p-8 md:p-12 rounded-md">
             {/* Text Section */}

@@ -104,7 +104,7 @@ const DentistTeam = () => {
             <h5 className="text-[#075791] uppercase font-bold mb-2 pt-4">
               Our Dentist
             </h5>
-            <h2 className="text-[2rem] sm:text-[3.5rem] font-jost leading-[1.5] font-semibold mb-4 my-4 pb-4">
+            <h2 className="text-[2rem] sm:text-[3.5rem] text-[#000] font-jost leading-[1.5] font-semibold mb-4 my-4 pb-4">
               Meet Our
               <br />
               Dentist In

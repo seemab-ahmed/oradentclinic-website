@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const WorkingHours = () => {
   return (
-    <section className='w-full'>
+    <section className='w-full bg-white'>
     <div data-aos="zoom-in"
      className="flex flex-col justify-center text-center bg-[#075791] px-8 text-white w-full max-w-[350px] mx-auto mt-12" style={{ height: '250px' }}>
       <h3 className="mb-4 text-white text-2xl font-semibold font-jost">Working Hours</h3>

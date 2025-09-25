@@ -24,7 +24,7 @@ const AppointmentForm = ({ branch = "I8", whatsappNumber = "923249134745" }) => 
   };
 
   return (
-    <div className="w-full p-6 text-center bg-[#077aaa] rounded shadow-lg">
+    <div className="w-full p-4 sm:p-6 text-center bg-[#077aaa] rounded shadow-lg">
       <h2 className="mb-4 text-[1.3rem] sm:text-[1.8rem] md:text-[2.5rem] font-jost font-semibold text-white">
         Make Appointment
       </h2>

@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -16,6 +16,8 @@ const Header = () => {
     setOpenSubmenu(prev => (prev === name ? null : name));
   };
   const pathname = usePathname();
+
+  const headerRef = useRef(null);
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -57,10 +59,22 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Close menu/submenu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (headerRef.current && !headerRef.current.contains(e.target)) {
+        setMenuOpen(false);
+        setOpenSubmenu(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
 
   return (
-    <header className="py-2 border-b border-[#D6D6D6] bg-white ">
-      {/* ${sticky fixed w-full top-0 z-[99] */}
+    <header ref={headerRef} className="py-2 border-b border-[#D6D6D6] bg-white ">
       <div className='max-w-[99%] m-auto px-5 flex justify-between items-center'>
         <Link href="/" className="flex items-center">
           <div className="flex items-center max-w-[221px]">
@@ -73,7 +87,7 @@ const Header = () => {
           </div>
         </Link>
         <nav className={`
-              fixed top-[126px] sm:top-[100px] md:top-[108px] lg:top-28 right-0 h-full max-w-[400px] w-full bg-secondry p-6
+              fixed top-[115px] sm:top-[100px] md:top-[108px] lg:top-28 right-0 h-full max-w-[400px] w-full bg-secondry p-6
               transform duration-300 ease-in-out z-50
               lg:static lg:transform-none lg:flex lg:flex-row bg-[#1B5795] lg:bg-transparent lg:p-0
               flex flex-col gap-[30px] lg:max-w-fit md:space-x-6 transition-all
@@ -81,47 +95,54 @@ const Header = () => {
               lg:translate-x-0 lg:opacity-100 lg:visible
             `}>
           <ul className="lg:gap-4 flex items-center space-x-8 flex-col lg:flex-row">
-          {navItems.map((item) => (
-  <li key={item.name} className="relative text-start m-0 py-2">
-    {item.submenu ? (
-      <div
-        onClick={() => handleSubmenuToggle(item.name)}
-        className="flex items-center justify-start lg:justify-center gap-1 px-4 w-full lg:w-fit text-xl leading-5 font-jost font-medium text-[#fff] lg:text-[#1E1E1E] cursor-pointer hover:text-black lg:hover:text-[#1B5795]"
-      >
-        <span>{item.name}</span>
-        <Image 
-          src={RotateIcon} 
-          alt="Rotate icon" 
-          className={`w-3 h-3 mt-1 transition-transform duration-300 ${openSubmenu === item.name ? "rotate-90" : ""}`}
-        />
-      </div>
-    ) : (
-      <Link 
-        href={item.path}
-        className="px-4 w-full lg:w-fit text-lg leading-5 font-jost font-medium text-[#fff] lg:text-[#1E1E1E] hover:text-black lg:hover:text-[#1B5795]"
-      >
-        {item.name}
-      </Link>
-    )}
+            {navItems.map((item) => (
+              <li key={item.name} className="relative text-start m-0 py-2">
+                {item.submenu ? (
+                  <div
+                    onClick={() => handleSubmenuToggle(item.name)}
+                    className="flex items-center justify-start lg:justify-center gap-1 px-4 w-full lg:w-fit text-xl leading-5 font-jost font-medium text-[#fff] lg:text-[#1E1E1E] cursor-pointer hover:text-black lg:hover:text-[#1B5795]"
+                  >
+                    <span>{item.name}</span>
+                    <Image
+                      src={RotateIcon}
+                      alt="Rotate icon"
+                      className={`w-3 h-3 mt-1 transition-transform duration-300 ${openSubmenu === item.name ? "rotate-90" : ""}`}
+                    />
+                  </div>
+                ) : (
+                  <Link
+                    href={item.path}
+                    onClick={() => {
+                      setMenuOpen(false);
+                      setOpenSubmenu(null);
+                    }}
+                    className="px-4 w-full lg:w-fit text-lg leading-5 font-jost font-medium text-[#fff] lg:text-[#1E1E1E] hover:text-black lg:hover:text-[#1B5795]"
+                  >
+                    {item.name}
+                  </Link>
+                )}
 
-    {/* Submenu: show only if this item is active */}
-    {item.submenu && openSubmenu === item.name && (
-      <ul className="absolute left-0 top-full lg:pt-9 w-48 bg-white shadow-2xl rounded-lg z-50 transition-all duration-300">
-        {item.submenu.map((sub) => (
-          <li key={sub.name}>
-            <Link
-              href={sub.path}
-              className="block px-4 text-base lg:text-xl font-jost py-1.5 hover:bg-[#85c441] hover:text-white"
-              onClick={() => setOpenSubmenu(null)} // Close on link click
-            >
-              {sub.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    )}
-  </li>
-))}
+                {/* Submenu: show only if this item is active */}
+                {item.submenu && openSubmenu === item.name && (
+                  <ul className="absolute left-[-20px] top-full lg:pt-9 w-48 text-black bg-white shadow-2xl rounded-lg z-50 transition-all duration-300">
+                    {item.submenu.map((sub) => (
+                      <li key={sub.name}>
+                        <Link
+                          href={sub.path}
+                          className="block px-4 text-base lg:text-xl font-jost py-1.5 hover:bg-[#85c441] hover:text-white"
+                          onClick={() => {
+                            setOpenSubmenu(null); // Close submenu
+                            setMenuOpen(false); // Close mobile menu (if open)
+                          }}
+                        >
+                          {sub.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
 
             {/* -------------- */}
           </ul>
@@ -144,17 +165,15 @@ const Header = () => {
               </div>
             </Link>
             <Link
-              href="/"
+              href="https://wa.me/923249134745?text=*I8%20Branch*%0AHello%2C%20I%20am%20interested%20in%20booking%20a%20dental%20appointment."
+              target="_blank"
               className=" w-full text-center text-lg leading-5 font-jost font-medium  px-4 py-3 text-white bg-[#85c441] rounded-[8px] hover:bg-[#85c441] transition-colors"
             >
               Appointment
             </Link>
           </div>
         </nav>
-
-
         <div className='flex gap-5 items-center'>
-
           {/* Hamburger */}
           <div className="flex items-end flex-col lg:hidden cursor-pointer" onClick={toggleMenu}>
             <div className="w-7 h-1 bg-black mb-1"></div>
@@ -171,10 +190,10 @@ const Header = () => {
                 priority
               />
             </div>
-              <Link
-         href="https://wa.me/923249134745?text=*I8%20Branch*%0AHello%2C%20I%20am%20interested%20in%20booking%20a%20dental%20appointment."
-        target="_blank"
-        rel="noopener noreferrer"
+            <Link
+              href="https://wa.me/923249134745?text=*I8%20Branch*%0AHello%2C%20I%20am%20interested%20in%20booking%20a%20dental%20appointment."
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[20px] font-medium leading-5 font-jost  px-5 py-3 text-white bg-[#075791] hover:bg-[#85c441] transition-colors"
             >
               Appointment

@@ -14,6 +14,7 @@ import WhatsappButton from '@/component/Whatsapp';
 import CallButton from '@/component/CallButton';
 import AboutI8Branch from '@/component/AboutI8Branch';
 import FAQSection from '@/component/Faqs';
+import WhyChooseOradent from '@/component/WhyChooseOradent';
 
 export default function Home() {
   return (
@@ -41,8 +42,9 @@ export default function Home() {
       {/* <Carousel /> */}
       <WorkingHours />
       <AboutI8Branch />
-      <SmileSection />
-      <About />
+      <WhyChooseOradent />
+      {/* <SmileSection />
+       <About /> */}
       <DentalServices />
       <Testimonial />
       <SocialReviewsSection />

@@ -1,37 +1,15 @@
 "use client";
 import Image from "next/image";
-// import CashImg from "@/public/images/payments/cash.png";
-// import EasypasaImg from "@/public/images/payments/jazzcash.png";
-// import JazzCashImg from "@/public/images/payments/Easypaisa.png";
-// import MeezanBankImg from "@/public/images/payments/meezan-bank.png";
-
-// const paymentImages = [
-//   {
-//     src: CashImg,
-//     alt: "Cash Payment",
-//   },
-//   {
-//     src: EasypasaImg,
-//     alt: "Easypaisa Payment",
-//   },
-//   {
-//     src: JazzCashImg,
-//     alt: "JazzCash Payment",
-//   },
-//   {
-//     src: MeezanBankImg,
-//     alt: "Meezan Bank Payment",
-//   },
-// ];
-
-
+import Link from "next/link";
 const OnlinePaymentSection = () => {
   return (
-    <div data-aos="fade-up" className="z-40 bg-white pt-5 w-full absolute top-[-80px] sm:top-[-160px] md:top-[-170px] lg:top-[-90px]">
+    <div data-aos="fade-up" className="z-40 pt-5 w-full absolute top-[-40px] sm:top-[-160px] md:top-[-170px] lg:top-[-100px]">
       <div className=" max-w-[1400px] lg:max-w-[1310px] mx-auto px-0 md:px-4 bg-[#075791]">
-        <div className="p-8 md:p-12 rounded-md">
+        <div className="p-6 md:p-12 rounded-md">
             {/* Text Section */}
-            <div className="lg:w-7/12 flex items-center gap-3">
+            <Link
+            href="tel:+923249134745"
+            className="lg:w-7/12 flex items-center gap-3">
               {/* Phone SVG */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,23 +31,7 @@ const OnlinePaymentSection = () => {
               <h4 className="text-white capitalize font-jost md:text-[calc(1.275rem+0.3vw)] text-[calc(1rem+0.1vw)] font-semibold">
                 Call Our Dentist for a Consultation
               </h4>
-            </div>
-
-            {/* Payment Image Section */}
-            {/* <div className="lg:w-5/12 flex flex-wrap justify-center lg:justify-end gap-3">
-              {paymentImages.map((img, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-2 rounded-md flex items-center justify-center w-16 h-16 md:h-16 md:w-24 shadow"
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </div>
-              ))}
-            </div> */}
+            </Link>
         </div>
       </div>
     </div>

@@ -55,7 +55,7 @@ const Testimonial = () => {
   
     {/* Content layer */}
     <div className="relative z-10 max-w-3xl mx-auto">
-      <h2 className="text-3xl sm:text-5xl leading-snug py-8 font-bold font-jost text-white text-center mb-6">What Our Patients Are Saying About Us</h2>
+      <h2 className="text-[1.5rem] md:text-[2rem] lg:text-[3rem] leading-snug py-0 sm:py-8 font-bold font-jost text-white text-center mb-6">What Our Patients Are Saying About Us</h2>
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
@@ -65,7 +65,7 @@ const Testimonial = () => {
       >
         {testimonials.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="text-center bg-[#2d6e9b] px-6 py-16 opacity-70" data-aos="zoom-in-left">
+            <div className="text-center bg-[#2d6e9b] px-3 sm:px-6 py-5 sm:py-16 opacity-70" data-aos="zoom-in-left">
               <img
                 src={item.image}
                 alt={item.name}
@@ -73,9 +73,9 @@ const Testimonial = () => {
                 width={96}
                 height={96}
               />
-              <p className="text-lg text-center font-sans mb-4">"{item.text}"</p>
+              <p className="text-sm sm:text-base text-center font-sans mb-4">"{item.text}"</p>
               <hr className="w-1/4 mx-auto border-white my-4" />
-              <h4 className="text-xl font-semibold">{item.name}</h4>
+              <h4 className="text-base sm:text-lg font-semibold">{item.name}</h4>
             </div>
           </SwiperSlide>
         ))}

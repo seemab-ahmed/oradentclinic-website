@@ -10,16 +10,16 @@ const CallButton = () => {
   };
 
   return (
-    <div className="fixed left-6 bottom-5 sm:bottom-[40px] z-50">
+    <div className="fixed left-7 bottom-6 sm:bottom-[50px] z-50">
       <a
         href="tel:+923249134745"
         onClick={handleClick}
         className={`bg-opacity-70 rounded-full flex items-center justify-center transition-colors 
           ${clicked ? "border-[#85c441]" : "border-[#b5db8a]"}
           border-2 
-          w-[37px] h-[37px] sm:w-[58px] sm:h-[58px]`}
+          w-[42px] h-[42px] sm:w-[58px] sm:h-[58px]`}
       >
-        <div className="relative w-[35px] h-[35px] sm:w-[56px] sm:h-[56px]">
+        <div className="relative w-[40px] h-[40px] sm:w-[56px] sm:h-[56px]">
           <Image
             src="/images/callIconn.png"
             alt="Call"

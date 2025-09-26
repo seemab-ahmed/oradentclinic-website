@@ -5,7 +5,7 @@ import clinicImage from "@/public/images/f8Images/f8slider2.webp";
 
 export default function AboutI8Branch() {
   return (
-    <section className="w-full bg-white py-6 sm:py-12">
+    <section className="w-full bg-white pt-12 md:pt-36 pb-6 sm:pb-12">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-10 items-center px-4">
         
         {/* Left Text */}

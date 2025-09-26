@@ -43,7 +43,7 @@ const blogs = [
     href: "https://oradentdentalclinic.com/blogs/another-blog",
     title: "Artificial Intelligence in General Dentistry: Revo...",
     description:
-      "Artificial Intelligence (AI) is no longer a futuristic concept. It is here, transforming industries,...",
+      "Artificial Intelligence (AI) is no longer a futuristic concept. It is here, transforming industries, including healthcare. Dentistry,...",
   },
   {
     href: "https://oradentdentalclinic.com/blogs/another-blog",

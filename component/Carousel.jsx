@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react";
 import slider1 from "@/public/images/carousel/slider-2.webp";
 import slider2 from "@/public/images/carousel/slider-3.webp";
+import OnlinePaymentSection from "./OnlinePaymentSection";
+
 const slides = [
-   {
+  {
     src: slider2,
     title: (
       <>
@@ -32,11 +34,13 @@ const slides = [
     btnlinkright: "https://share.google/aPUNO0fTSB4Y17rEV",
   },
 ];
+
 const Carousel = () => {
   const [current, setCurrent] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const slideRef = useRef(null);
   const extendedSlides = [slides[slides.length - 1], ...slides, slides[0]];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => prev + 1);
@@ -48,14 +52,12 @@ const Carousel = () => {
   // Handle infinite loop effect
   useEffect(() => {
     if (current === extendedSlides.length - 1) {
-      // reached fake last slide → jump to real first
       setTimeout(() => {
         setIsTransitioning(false);
         setCurrent(1);
-      }, 2000); // match transition duration
+      }, 2000);
     }
     if (current === 0) {
-      // reached fake first slide → jump to real last
       setTimeout(() => {
         setIsTransitioning(false);
         setCurrent(extendedSlides.length - 2);
@@ -64,70 +66,55 @@ const Carousel = () => {
       setIsTransitioning(true);
     }
   }, [current, extendedSlides.length]);
+
   return (
-    <div className=" bg-white">
-      <div className="w-full">
-        <marquee
-          direction="left"
-          className="bg-[#85c441] font-light text-white text-sm md:text-base py-2 px-4"
-        >
-          We Are Opened a New Branch At F8 Islamabad
-        </marquee>
-      </div>
-      <div className="relative w-full h-[24.5vh] sm:h-[64vh] md:h-[70vh] overflow-hidden">
+    <div className="bg-white relative">
+      <div className="relative w-full h-[48vh] sm:h-[64vh] md:h-[82vh] overflow-hidden">
+        
+        {/* ✅ Marquee inside slider (fixed at top) */}
+        <div className="absolute top-0 left-0 w-full z-30">
+          <marquee
+            direction="left"
+            className="bg-[#85c441] font-light text-white text-xs sm:text-sm md:text-base py-2 px-4"
+          >
+            Mon - Fri (11:00am - 9:30pm) — Saturday (11:00am - 09:30pm) — Sunday (02:00pm - 9:30pm) 
+            &nbsp; | &nbsp; We Opened a New Branch At F-8 Islamabad 
+           
+          </marquee>
+        </div>
+
         {/* Slide Wrapper */}
         <div
           ref={slideRef}
           className={`flex h-full ${
-            isTransitioning
-              ? "transition-transform duration-1500 ease-in-out"
-              : ""
+            isTransitioning ? "transition-transform duration-1500 ease-in-out" : ""
           }`}
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {extendedSlides.map((slide, index) => (
             <div key={index} className="relative w-full flex-shrink-0 h-full">
               {/* Background Image */}
-              <Image
-                src={slide.src}
-                alt={`Slide ${index}`}
-                fill
-                className="object-cover"
-              />
+              <Image src={slide.src} alt={`Slide ${index}`} fill className="object-cover" />
               <div className="absolute inset-0 bg-[#091e3e]/80" />
 
               {/* Text content */}
               <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-4">
-                <h1 className="text-[1.3rem] md:text-[3rem] lg:text-[4rem] font-black sm:mt-2 font-jost leading-snug w-[368px] md:w-5xl">
+                <h1 className="text-[1.3rem] md:text-[3rem] lg:text-[4rem] font-black mt-6 sm:mt-2 font-jost leading-snug w-[368px] md:w-5xl">
                   {slide.title}
                 </h1>
-
-                <p className="mt-1 sm:mt-4 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray-200 leading-relaxed">
+                <p className="mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray-200 leading-relaxed">
                   {slide.disc}
                 </p>
 
                 {/* Buttons */}
-                <div className="mt-2 sm:mt-6 flex flex-row gap-3 md:gap-4 justify-center items-center">
-                  <Link
-                    href={slide.btnlinkright}
-                    target={
-                      slide.btnlinkright.startsWith("http") ? "_blank" : "_self"
-                    }
-                    rel="noopener noreferrer"
-                  >
-                    <button className="px-2 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-base sm:text-base font-light sm:font-semibold bg-[#85c441] text-white hover:bg-[#075791] transition duration-300 w-34 sm:w-40 md:w-48  shadow-lg">
+                <div className="mt-8 sm:mt-6 flex flex-row gap-3 md:gap-4 justify-center items-center">
+                  <Link href={slide.btnlinkright} target="_blank" rel="noopener noreferrer">
+                    <button className="px-2 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-base sm:text-base font-light sm:font-semibold bg-[#85c441] text-white hover:bg-[#075791] transition duration-300 w-34 sm:w-40 md:w-48 shadow-lg">
                       {slide.btntextright}
                     </button>
                   </Link>
-
-                  <Link
-                    href={slide.btnlinkleft}
-                    target={
-                      slide.btnlinkleft.startsWith("http") ? "_blank" : "_self"
-                    }
-                    rel="noopener noreferrer"
-                  >
-                    <button className="px-2 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-base sm:text-base font-light sm:font-semibold bg-[#075791] text-white hover:bg-[#85c441] transition duration-300 w-34 sm:w-40 md:w-48 sm:rounded-lg shadow-lg">
+                  <Link href={slide.btnlinkleft} target="_blank" rel="noopener noreferrer">
+                    <button className="px-2 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-base sm:text-base font-light sm:font-semibold bg-[#075791] text-white hover:bg-[#85c441] transition duration-300 w-34 sm:w-40 md:w-48 shadow-lg">
                       {slide.btntextleft}
                     </button>
                   </Link>
@@ -136,33 +123,28 @@ const Carousel = () => {
             </div>
           ))}
         </div>
+
         {/* Indicators */}
-        <div className="absolute z-30 flex -translate-x-1/2 bottom-2 sm:bottom-5 left-1/2 space-x-3">
+        {/* <div className="absolute z-30 flex -translate-x-1/2 bottom-2 sm:bottom-20 left-1/2 space-x-3">
           {slides.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrent(index + 1)} // shift because of cloning
+              onClick={() => setCurrent(index + 1)}
               className={`w-3 h-3 rounded-full ${
                 current === index + 1 ? "bg-blue-500" : "bg-gray-300"
               }`}
               aria-label={`Slide ${index + 1}`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
-      <div className="w-full">
-       <marquee
-  direction="left"
-  className="bg-[#85c441] font-light text-white text-sm md:text-base py-2 px-4"
->
-  Mon - Fri (11:00am - 9:30pm) -- Saturday (11:00am -
-  09:30pm) -- Sunday (02:00pm - 8:00pm) If you want to improve
-  your smile, there's no better place to accomplish it than at the best
-  dental clinic in Islamabad.
-</marquee>
 
+      {/* Payment Section */}
+      <div className="sm:absolute w-full bottom-[-40px] sm:bottom-[-90px]">
+        <OnlinePaymentSection />
       </div>
     </div>
   );
 };
+
 export default Carousel;

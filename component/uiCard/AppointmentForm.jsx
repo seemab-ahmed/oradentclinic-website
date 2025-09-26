@@ -31,6 +31,7 @@ const AppointmentForm = ({ branch = "I8", whatsappNumber = "923249134745" }) => 
 
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Service Dropdown */}
           <select
             className="w-full p-4 border-none bg-white rounded text-black text-sm sm:text-base"
             name="service"
@@ -47,41 +48,54 @@ const AppointmentForm = ({ branch = "I8", whatsappNumber = "923249134745" }) => 
             <option value="Teeth Filling">Teeth Filling</option>
           </select>
 
+          {/* Name */}
           <input
             type="text"
             name="patient_name"
             placeholder="Your Name"
             className="w-full p-4 border-none bg-white text-black text-sm sm:text-base rounded"
+            required
           />
+
+          {/* Email */}
           <input
             type="email"
             name="patient_email"
             placeholder="Your Email"
             className="w-full p-4 border-none bg-white text-black rounded text-sm sm:text-base"
+            required
           />
+
+          {/* Hidden Branch */}
           <input type="hidden" name="branch" value={branch} />
+
+          {/* Phone */}
           <input
-            type="text"
+            type="tel"
             name="patient_phone"
             placeholder="Your Phone Number"
             className="w-full p-4 border-none bg-white text-black rounded text-sm sm:text-base"
+            required
           />
+
+          {/* Date Picker */}
           <input
-            type="text"
+            type="date"
             name="appointment_date"
-            placeholder="Appointment Date"
             className="w-full p-4 border-none bg-white text-black rounded text-sm sm:text-base"
-            autoComplete="off"
+            required
           />
+
+          {/* Time Picker */}
           <input
-            type="text"
+            type="time"
             name="appointment_time"
-            placeholder="Appointment Time"
             className="w-full p-4 border-none bg-white text-black rounded text-sm sm:text-base"
-            autoComplete="off"
+            required
           />
         </div>
 
+        {/* Submit */}
         <button
           type="submit"
           className="mt-6 w-full bg-[#091e3e] text-white font-jost text-[1rem] py-3 rounded hover:bg-[#10151b] transition"

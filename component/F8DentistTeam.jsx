@@ -74,17 +74,6 @@ const dentists = [
     ],
     image: Huda,
   },
-  {
-    name: "Dr. Qurat Ul Ain Arshad",
-    qualifications: [
-      "BDS (UHS), RDS (Gold Medalist)",
-      "C-Orthodontist, Cosmetic Dentist",
-      "C-Restorative & Endodontist",
-      "Intl. Certified Aesthetic Physician (USA)",
-      "Consultant at PAF Hospital, Islamabad",
-    ],
-    image: DrQurat,
-  },
 ];
 
 const F8DentistTeam = () => {

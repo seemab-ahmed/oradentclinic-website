@@ -7,7 +7,9 @@ import CallButton from '@/component/CallButton'
 const page = () => {
   return (
     <>
+    <div className='mt-3 sm:mt-32'>
       <Map />
+    </div>
       <WhatsappButton />
       <CallButton />
 

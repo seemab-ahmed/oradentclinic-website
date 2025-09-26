@@ -12,8 +12,8 @@ import OnlinePaymentSection from "./OnlinePaymentSection";
 
 const Footer = () => {
   return (
-    <div data-aos="fade-up" className="w-full bg-[#091e3e] relative mt-[80px] md:mt-[150] lg:mt-[180px]">
-      <div className="max-w-[1400px] mx-auto px-4 lg:max-w-[1337px] pt-22 py-10">
+    <div data-aos="fade-up" className="w-full bg-[#091e3e] relative mt-[80px] md:mt-[150]">
+      <div className="max-w-[1400px] mx-auto px-4 lg:max-w-[1337px] py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-12">
           
           {/* Quick Links */}
@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
             <div className="flex items-start gap-1.5 sm:gap-3 mt-2">
               <Image src={MailIcon} alt="email" width={18} height={18}/>
-              <Link href="mailto:info@oradentdentalclinic.com" className="text-white">info@oradentdentalclinic.com</Link>
+              <Link href="mailto:info@oradentdentalclinic.com" className="text-white">oradentmaxillofacialandsurgery@gmail.com</Link>
             </div>
             <div className="mt-3 text-white text-sm">
               <strong>Working Hours:</strong>
@@ -105,7 +105,7 @@ const Footer = () => {
         </span>
       </div>
    
-      <OnlinePaymentSection/>
+      {/* <div className="absolute w-full top-[-40px] sm:top-[-160px] md:top-[-170px] lg:top-[-100px]"><OnlinePaymentSection/></div> */}
     </div>
   );
 };

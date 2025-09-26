@@ -12,7 +12,7 @@ const WhatsappButton = () => {
         rel="noopener noreferrer"
         className="block"
       >
-        <div className="relative w-[44px] h-[44px] sm:w-[66px] sm:h-[66px]">
+        <div className="relative w-[64px] h-[64px] sm:w-[66px] sm:h-[66px]">
           <Image
             src="/images/whatsapppp.png"
             alt="WhatsApp"

@@ -15,32 +15,33 @@ import CallButton from '@/component/CallButton';
 import AboutI8Branch from '@/component/AboutI8Branch';
 import FAQSection from '@/component/Faqs';
 import WhyChooseOradent from '@/component/WhyChooseOradent';
+import { MapHomeInfov } from '@/component/MapHomeInfo';
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Oradent dental</title>
-        <meta name="description" content="Discover insights, guides and best practices to enhance your skills and secure your future with Skills2Evolve." />
-        <meta name="keywords" content="skills development, professional growth, learning, career evolution" />
+        <meta name="description" content="Oradent Dental Clinic is one of the premier dental clinics in Islamabad, with 8+ experienced dentists and two modern dental offices, providing complete care for patients of all ages." />
+        <meta name="keywords" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/oraLogo.webp" />
 
         {/* Open Graph / Social Media Meta Tags */}
-        <meta property="og:title" content="Skills2Evolve - Learn, Evolve and Secure Your Future" />
-        <meta property="og:description" content="Discover insights, guides and best practices to enhance your skills and secure your future." />
+        <meta property="og:title" content="Best Dentist in Islamabad - Oradent Dental Clinic Islamabad" />
+        <meta property="og:description" content="Oradent Dental Clinic is one of the premier dental clinics in Islamabad, with 8+ experienced dentists and two modern dental offices, providing complete care for patients of all ages." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://skills2evolve.com" />
-        <meta property="og:image" content="https://skills2evolve.com/og-image.jpg" />
+        <meta property="og:url" content="https://oradentdentalclinic.com/" />
+        <meta property="og:image" content="https://oradentdentalclinic.com/images/oraLogo.webp" />
 
         {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Skills2Evolve - Learn, Evolve and Secure Your Future" />
         <meta name="twitter:description" content="Discover insights, guides and best practices to enhance your skills and secure your future." />
-        <meta name="twitter:image" content="https://skills2evolve.com/twitter-image.jpg" />
+        <meta name="twitter:image" content="https://skills2evolve.com/twitter-image.jpg" /> */}
       </Head>
       {/* <Carousel /> */}
-      <WorkingHours />
+      {/* <WorkingHours /> */}
       <AboutI8Branch />
       <WhyChooseOradent />
       {/* <SmileSection />
@@ -53,6 +54,7 @@ export default function Home() {
       <CallButton />
       <AppointmentSection />
       <FAQSection />
+      <MapHomeInfov/>
       <BlogSection />
     </>
   );

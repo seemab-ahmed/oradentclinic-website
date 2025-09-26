@@ -6,7 +6,9 @@ import React from 'react'
 const page = () => {
   return (
     <>
+    <div className='mt-2 sm:mt-32'>
       <DentistTeam/>
+    </div>
       <WhatsappButton/>
       <CallButton/>
     </>

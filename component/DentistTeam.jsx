@@ -39,8 +39,9 @@ const dentists = [
     ],
     image: Kaynaat,
   },
-  {
+{
     name: "Dr. Baria Zareef",
+    href: "/dr-baria-zareef-endodontist-Islamabad",
     qualifications: [
       "Dental Surgeon",
       "BDS RDS (UHS)",
@@ -122,14 +123,15 @@ const DentistTeam = () => {
           </div>
 
           {/* Dentist Cards using reusable component */}
-          {dentists.map((dentist, index) => (
-            <DentistCard
-              key={index}
-              name={dentist.name}
-              qualifications={dentist.qualifications}
-              image={dentist.image}
-            />
-          ))}
+         {dentists.map((dentist, index) => (
+  <DentistCard
+    key={index}
+    name={dentist.name}
+    qualifications={dentist.qualifications}
+    image={dentist.image}
+    href={dentist.href} 
+  />
+))}
         </div>
       </div>
     </div>

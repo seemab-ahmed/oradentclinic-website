@@ -1,18 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image"; 
-import Logo from "@/public/images/oraLogo.webp";
 import LocationIcon from "@/public/images/icons/locationIcon.png";
-import RightArrow from "@/public/images/icons/rightArrow.png";
 import FacebookIcom from "@/public/images/icons/facebook.png";
-import InstagramIcon from "@/public/images/icons/instagram.png"
-import MailIcon from "@/public/images/icons/mailIcon.png"
-import PhoneIcon from "@/public/images/icons/phoneIcon.png"
-import OnlinePaymentSection from "./OnlinePaymentSection";
+import InstagramIcon from "@/public/images/icons/instagram.png";
+import MailIcon from "@/public/images/icons/mailIcon.png";
+import PhoneIcon from "@/public/images/icons/phoneIcon.png";
 
 const Footer = () => {
   return (
-    <div data-aos="fade-up" className="w-full bg-[#091e3e] relative mt-[80px] md:mt-[150]">
+    <div data-aos="fade-up" className="w-full bg-[#091e3e] relative mt-[80px] md:mt-[60]">
       <div className="max-w-[1400px] mx-auto px-4 lg:max-w-[1337px] py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-12">
           
@@ -104,10 +101,7 @@ const Footer = () => {
           © OraDent Dental Clinic. All Rights Reserved.
         </span>
       </div>
-   
-      {/* <div className="absolute w-full top-[-40px] sm:top-[-160px] md:top-[-170px] lg:top-[-100px]"><OnlinePaymentSection/></div> */}
     </div>
   );
 };
-
 export default Footer;

@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
         <AOSWrapper>
           <TopBar />
           <Header />
-          <Carousel />
+          {/* <Carousel /> */}
           {children}
           <Footer />
         </AOSWrapper>

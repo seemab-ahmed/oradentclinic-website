@@ -3,6 +3,7 @@ import AboutFBranch from '@/component/AboutFBranch'
 import AboutI8Branch from '@/component/AboutI8Branch'
 import AppointmentSection from '@/component/AppointmentSection'
 import CallF8 from '@/component/CallF8'
+import Carousel from '@/component/Carousel'
 import DentistTeam from '@/component/DentistTeam'
 import F8AppoinmentSection from '@/component/F8AppoinmentSection'
 import F8DentistTeam from '@/component/F8DentistTeam'
@@ -18,6 +19,7 @@ import React from 'react'
 const page = () => {
   return (
     <>
+    <Carousel />
     {/* <MapFBranch/> */}
     {/* <AboutFBranch/> */}
     <AboutI8Branch/>

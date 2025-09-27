@@ -28,30 +28,30 @@ export const MapHomeInfov = () => {
 
   return (
     <div className="w-full py-10 sm:bg-[#f9fcff]">
-      <div className="sm:container max-w-[1400px] mx-auto px-0 sm:px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <h2 className='text-[1.5rem] md:text-[2rem] mt-4 mb-4 lg:text-[3rem] text-center font-bold font-jost leading-snug text-[#091e3e] aos-init aos-animate px-2'>Our Dental Clinics in Islamabad</h2>
+        <p className='text-center text-base sm:text-lg w-full max-w-5xl mx-auto mb-12 text-gray-700 px-4'>We are proud to serve patients across Islamabad with two convenient locations. Both of our clinics are fully equipped and offer the same quality care, advanced treatments, and a friendly environment to make your dental visits comfortable</p>
         
+      <div className="max-w-[1400px] mx-auto px-0 sm:px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
         {branches.map((b, idx) => (
           <div key={idx} className="bg-[#eef9ff] sm:rounded-lg p-6 shadow flex flex-col gap-6">
             {/* Branch Info */}
             <div>
-              <h5 className="text-[#075791] uppercase font-semibold mb-2">Contact Us</h5>
-              <h2 className="text-2xl font-bold text-[#091e3e] mb-4">{b.branch}</h2>
-
+              <h3 className="text-2xl font-bold text-[#091e3e] mb-4">{b.branch}</h3>
               {/* Address */}
               <div className="flex items-start gap-3 mb-3">
-                <Image src={Location} alt="Location Icon" width={22} height={22} />
+                <Image src={Location} alt="Location Icon"  className="w-5 h-5 sm:w-8 sm:h-8 mt-1"/>
                 <p className="text-[#6B6A75] text-sm">{b.address}</p>
               </div>
 
               {/* Email */}
               <div className="flex items-start gap-3 mb-3">
-                <Image src={Mail} alt="Email Icon" width={22} height={22} />
-                <p className="text-sm">{b.email}</p>
+                <Image src={Mail} alt="Email Icon"  className="w-4 h-4 sm:w-8 sm:h-8 mt-1"/>
+                <p className="text-sm text-[#6B6A75]">{b.email}</p>
               </div>
 
               {/* Phones */}
               <div className="flex items-start gap-3 mb-3">
-                <Image src={Phone} alt="Phone Icon" width={22} height={22} />
+                <Image src={Phone} alt="Phone Icon"  className="w-5 h-5 sm:w-8 sm:h-8 mt-1"/>
                 <div>
                   {b.phone.map((ph, i) => (
                     <a
@@ -67,7 +67,7 @@ export const MapHomeInfov = () => {
 
               {/* Working Hours */}
               <div className="flex items-start gap-3">
-                <Image src={Clock} alt="Clock Icon" width={22} height={22} />
+                <Image src={Clock} alt="Clock Icon"  className="w-5 h-5 sm:w-8 sm:h-8 mt-1"/>
                 <p className="text-sm text-gray-700">{b.hours}</p>
               </div>
             </div>

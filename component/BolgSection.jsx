@@ -1,71 +1,53 @@
 import React from "react";
+import Link from "next/link";
+import Image from 'next/image';
+import { excerptFromHtml } from '@/component/utils/blog';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import blogs from "@/component/data/blogs";
+import { useMemo, useState } from 'react';
 
-const BlogCard = ({ href, title, description }) => {
+const BlogCard = ({ blog }) => {
+  const excerpt = blog.excerpt || excerptFromHtml(blog.content || '', 140);
+
   return (
     <div
       data-aos="fade-up"
-      className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-5 h-full flex flex-col justify-between"
+      className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 sm:p-5 h-full flex flex-col"
     >
-      <a href={href} className="block">
+      <Link href={`/blog/${blog.slug}`} className="block">
+        <div className="relative w-full h-40 mb-3 rounded overflow-hidden">
+          {blog.image && (
+            <Image src={blog.image} alt={blog.title} fill className="object-cover" />
+          )}
+        </div>
+
         <h3 className="text-base sm:text-lg font-semibold text-[#091e3e] hover:text-[#85c441] mb-2 line-clamp-2">
-          {title}
+          {blog.title}
         </h3>
-        <p className="text-sm sm:text-lg text-gray-600 line-clamp-3">{description}</p>
-      </a>
+        <p className="text-sm text-gray-500 mb-3">{blog.author} • {blog.date}</p>
+        <p className="text-sm sm:text-lg text-gray-600 line-clamp-3 flex-grow">{excerpt}</p>
+      </Link>
     </div>
   );
 };
 
-const blogs = [
-  {
-    href: "https://oradentdentalclinic.com/blogs/tips-for-a-comfortable-teeth-filling-experience-expert-advice-from-dentists",
-    title: "Essential Tips for Maintaining Dental Implants: Ex...",
-    description:
-      "Dental implants are an incredible solution for missing teeth, offering a permanent and reliable opti...",
-  },
-  {
-    href: "https://oradentdentalclinic.com/blogs/another-blog",
-    title: "The Role of Orthodontics in Overall Health: Beyond...",
-    description:
-      "Ever wondered if braces just straighten your teeth, but what about aesthetics? Orthodontic treatment...",
-  },
-  {
-    href: "https://oradentdentalclinic.com/blogs/another-blog",
-    title: "Surprising Truth About Professional Teeth Whitenin...",
-    description:
-      "Teeth whitening has gained immense popularity as one of the go-to cosmetic procedures. But is it wor...",
-  },
-  {
-    href: "https://oradentdentalclinic.com/blogs/another-blog",
-    title: "Artificial Intelligence in General Dentistry: Revo...",
-    description:
-      "Artificial Intelligence (AI) is no longer a futuristic concept. It is here, transforming industries, including healthcare. Dentistry,...",
-  },
-  {
-    href: "https://oradentdentalclinic.com/blogs/another-blog",
-    title: "Braces, Aligners, and Beyond: The Evolution of Ort...",
-    description:
-      "Orthodontics has progressed from traditional metal braces to modern, nearly invisible solutions. Inn...",
-  },
-  {
-    href: "https://oradentdentalclinic.com/blogs/another-blog",
-    title: "Next-Gen Dental Implants: Innovations, Costs, and...",
-    description:
-      "Dental implants have revolutionized oral healthcare, offering a permanent solution for missing teeth...",
-  },
-  {
-    href: "https://oradentdentalclinic.com/blogs/another-blog",
-    title: "Best Orthodontic Treatments for Kids: When and Why...",
-    description:
-      "Every parent wants their child to have a confident smile and healthy teeth. But did you know that ea...",
-  },
-];
-
 const BlogSection = () => {
+  const [activeTag, setActiveTag] = useState(null);
+
+  const uniqueTags = useMemo(() => {
+    const s = new Set();
+    blogs.forEach(b => (b.tags || []).forEach(t => s.add(String(t).toLowerCase())));
+    return Array.from(s);
+  }, []);
+
+  const filteredBlogs = useMemo(() => {
+    if (!activeTag) return blogs;
+    return blogs.filter(b => (b.tags || []).map(t => t.toLowerCase()).includes(activeTag));
+  }, [activeTag]);
+
   return (
     <section className="pt-4 sm:py-12 bg-white w-full mt-0 lg:mt-16">
       <div className="container w-full max-w-[1400px] lg:max-w-[1337px] mx-auto px-4">
@@ -89,17 +71,32 @@ const BlogSection = () => {
           </a>
         </div>
 
+        {/* Tag filter bar */}
+        <div className="mb-6 flex flex-wrap gap-2">
+          <button
+            onClick={() => setActiveTag(null)}
+            className={`px-3 py-1 rounded ${!activeTag ? 'bg-[#85c441] text-white' : 'bg-gray-100'}`}
+          >
+            All
+          </button>
+          {uniqueTags.map(tag => (
+            <button
+              key={tag}
+              onClick={() => setActiveTag(tag)}
+              className={`px-3 py-1 rounded ${activeTag === tag ? 'bg-[#85c441] text-white' : 'bg-gray-100'}`}
+            >
+              #{tag}
+            </button>
+          ))}
+        </div>
+
         {/* Swiper Carousel */}
         <Swiper
           modules={[A11y, Autoplay, Navigation]}
           spaceBetween={20}
           slidesPerView={1}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-            speed={1200}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
+          speed={1200}
           breakpoints={{
             300: { slidesPerView: 1 },
             500: { slidesPerView: 2 },
@@ -107,13 +104,11 @@ const BlogSection = () => {
             1024: { slidesPerView: 4 },
           }}
         >
-          {blogs.map((blog, index) => (
-            <SwiperSlide key={index}>
-              <BlogCard {...blog} />
+          {filteredBlogs.map((blog) => (
+            <SwiperSlide key={blog.slug}>
+              <BlogCard blog={blog} />
             </SwiperSlide>
           ))}
-
-          {/* navigation buttons removed per request */}
         </Swiper>
       </div>
     </section>

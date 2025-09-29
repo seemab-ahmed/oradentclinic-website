@@ -6,6 +6,7 @@ import FacebookIcom from "@/public/images/icons/facebook.png";
 import InstagramIcon from "@/public/images/icons/instagram.png";
 import MailIcon from "@/public/images/icons/mailIcon.png";
 import PhoneIcon from "@/public/images/icons/phoneIcon.png";
+import PinterestIcon from "@/public/images/icons/pintreast.png"
 
 const Footer = () => {
   return (
@@ -86,11 +87,15 @@ const Footer = () => {
           <div>
             <h4 className="text-lg text-white font-jost mb-4 font-semibold">Follow Us</h4>
             <div className="flex gap-4">
-              <Link href="https://facebook.com" className="bg-[#044f96] rounded-lg p-2">
+              <Link href="https://www.facebook.com/people/OraDent-Dental-Clinic/61550781995358/" target="_blank" className="bg-[#044f96] rounded-lg p-2">
                 <Image src={FacebookIcom} alt="facebook" width={28} height={28}/>
               </Link>
-              <Link href="https://instagram.com" className="bg-[#044f96] rounded-lg p-2">
+              <Link href="https://www.instagram.com/oradentdentalclinici8/?igsh=MWY2em9maGZpaTdkcw%3D%3D#" target="_blank" className="bg-[#044f96] rounded-lg p-2">
                 <Image src={InstagramIcon} alt="instagram" width={28} height={28}/>
+              </Link>
+              <Link href="https://www.pinterest.com/" className="bg-[#044f96] rounded-lg p-2">
+                <Image src={PinterestIcon
+                } alt="pintereast" width={28} height={28}/>
               </Link>
             </div>
           </div>

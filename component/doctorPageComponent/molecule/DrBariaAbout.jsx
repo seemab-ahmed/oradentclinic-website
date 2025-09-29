@@ -34,9 +34,9 @@ export default function DrBariaAbout() {
 
           <a
             href="tel:03418844838"
-            className="inline-block bg-[#85c441] hover:bg-[#6ba634] text-white px-6 py-3 rounded-lg font-semibold transition-transform transform hover:scale-105"
+            className="inline-block bg-[#85c441] hover:bg-[#6ba634] text-white px-1 sm:px-6 py-2 sm:py-3 text-base sm:text-xl text-center md:text-start font-semibold transition-transform transform hover:scale-105"
           >
-            Book Appointment
+            Call now to schedule your dental consultation with Dr. Baria.
           </a>
         </div>
 

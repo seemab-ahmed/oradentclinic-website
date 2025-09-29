@@ -11,6 +11,7 @@ import CallButton from "@/component/CallButton";
 import WhatsappButton from "@/component/Whatsapp";
 import TestimonialCarousel from "@/component/TestimonialCarousel";
 import ReviewBg from "@/public/images/carousel/slider-3.webp";
+import FAQSection from "@/component/FaqSection";
 
 export function DrBaria() {
   const bariaCertificates = [
@@ -72,6 +73,62 @@ export function DrBaria() {
       image: "images/testimonials/usericon.webp",
     },
   ];
+  //   const faqs = [
+  //   { question: "What is React?", answer: "React is a UI library by Facebook." },
+  //   { question: "Is it free?", answer: "Yes, React is open-source and free." },
+  // ];
+  const faqs = [
+    {
+      question: "Who is Dr. Baria Zareef?",
+      answer:
+        "Dr. Baria Zareef is a Specialist Endodontist and Cosmetic Dentist in Islamabad with more than 6 years of clinical experience. She is skilled in root canals, cosmetic dentistry, and restorative treatments.",
+    },
+    {
+      question: "What dental treatments does she provide?",
+      answer:
+        "She offers root canal treatments, crowns and bridges, teeth whitening, veneers, cosmetic smile makeovers, and emergency dental care.",
+    },
+    {
+      question: "Where does Dr. Baria Zareef practice?",
+      answer:
+        "She currently practices at Oradent Dental Clinic, Islamabad, where she treats patients with modern dental technology.",
+    },
+    {
+      question: "Is Dr. Baria experienced in root canals?",
+      answer:
+        "Yes, root canal treatment is her main specialty. She has advanced training in Endodontics and ensures painless, effective results.",
+    },
+    {
+      question: "Does she provide cosmetic dental services?",
+      answer:
+        "Yes, she offers veneers, smile makeover procedures, and professional teeth whitening to enhance your smile.",
+    },
+    {
+      question: "Are her treatments affordable?",
+      answer:
+        "Yes, patients often highlight that her treatments are high-quality yet reasonably priced compared to other clinics in Islamabad.",
+    },
+    {
+      question: "What are her qualifications?",
+      answer:
+        "She completed her BDS in 2019, a Post Graduate Certification in Endodontics (C-Endo) in 2023, and is now pursuing an MDS in Operative Dentistry & Endodontics.",
+    },
+    {
+      question: "What makes her different from other dentists?",
+      answer:
+        "Patients trust her for her gentle care, clear communication, and focus on comfort during every treatment.",
+    },
+    {
+      question: "Does she treat dental emergencies?",
+      answer:
+        "Yes, she provides quick relief for dental pain, broken teeth, and infections through emergency dental care.",
+    },
+    {
+      question: "How can I book an appointment with Dr. Baria?",
+      answer:
+        "You can book your appointment at Oradent Dental Clinic, Islamabad by calling the clinic or visiting in person.",
+    },
+  ];
 
   return (
     <>
@@ -79,25 +136,26 @@ export function DrBaria() {
         <DrHeader title="Meet Dr. Baria Zareef – Specialist Endodontist in Islamabad" />
       </div>
       <DrBariaAbout />
-      <div>
-        <DrCertificates
-          title="Certificates & Achievements"
-          subtitle="Recognitions and Certifications Earned by Dr. Baria Zareef"
-          certificates={bariaCertificates}
-        />
-      </div>
-      <div>
-        <TestimonialCarousel
-          title="What Patients Say About Dr. Baria Zareef"
-          background={ReviewBg.src}
-          testimonials={drBariaTestimonials}
-        />
-        <WhyChoose
-          title="Why Choose Dr. Baria"
-          intro="Choosing the right dentist can make a big difference for your smile and comfort. Dr. Baria Zareef is known for her gentle and caring approach."
-          features={features}
-        />
-      </div>
+      <WhyChoose
+        title="Why Choose Dr. Baria"
+        intro="Choosing the right dentist can make a big difference for your smile and comfort. Dr. Baria Zareef is known for her gentle and caring approach."
+        features={features}
+      />
+      <FAQSection
+        faqs={faqs}
+        title="Frequently Asked Questions"
+        subtitle="Quick answers to common queries"
+      />
+      <DrCertificates
+        title="Certificates & Achievements"
+        subtitle="Recognitions and Certifications Earned by Dr. Baria Zareef"
+        certificates={bariaCertificates}
+      />
+      <TestimonialCarousel
+        title="What Patients Say About Dr. Baria Zareef"
+        background={ReviewBg.src}
+        testimonials={drBariaTestimonials}
+      />
       <CallButton />
       <WhatsappButton />
     </>

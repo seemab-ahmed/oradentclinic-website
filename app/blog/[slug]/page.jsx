@@ -5,17 +5,17 @@ import WhatsappButton from "@/component/Whatsapp";
 import CallButton from "@/component/CallButton";
 
 export default function BlogDetailPage({ params }) {
-  const blog = blogs.find((b) => b.slug === params.slug); // Match slug
+  const blog = blogs.find((b) => b.slug === params.slug);
 
-  if (!blog) return notFound(); // If not found, show 404
+  if (!blog) return notFound();
 
 return(
   <>
+  <BlogPost blog={blog} />
   <WhatsappButton/>
   <CallButton/>
-  <BlogPost blog={blog} />
   </>
 )
 
-  return <BlogPost blog={blog} />; // Pass full blog data to BlogPost component
+  return <BlogPost blog={blog} />;
 }

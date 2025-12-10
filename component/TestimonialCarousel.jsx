@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 
 const TestimonialCarousel = ({ title, background, testimonials }) => {
   return (
-    <div className="relative py-10 px-4 text-white">
+    <div className="relative py-10 px-4 md:px-6 text-white">
       {/* Background image */}
       {background && (
         <div

@@ -1,11 +1,6 @@
 "use client";
 import Head from 'next/head';
-// import Carousel from '@/component/Carousel';
-import About from '@/component/About';
-import SmileSection from '@/component/SmileSection';
-import WorkingHours from '@/component/WorkingHours';
 import AppointmentSection from '@/component/AppointmentSection';
-import SocialReviewsSection from '@/component/socialReviewsSection ';
 import BlogSection from '@/component/BolgSection';
 import DentistTeam from '@/component/DentistTeam';
 import Testimonial from '@/component/Testimonial';
@@ -13,11 +8,11 @@ import DentalServices from '@/component/DentalServices';
 import WhatsappButton from '@/component/Whatsapp';
 import CallButton from '@/component/CallButton';
 import AboutI8Branch from '@/component/AboutI8Branch';
-// import FAQSection from '@/component/Faqs';
 import WhyChooseOradent from '@/component/WhyChooseOradent';
 import { MapHomeInfov } from '@/component/MapHomeInfo';
 import Carousel from '@/component/Carousel';
 import FAQSection from '@/component/FaqSection';
+import OnlinePaymentSection from '@/component/OnlinePaymentSection';
 
 export default function Home() {
    const faqs = [
@@ -95,20 +90,20 @@ export default function Home() {
         <meta name="twitter:description" content="Oradent Dental Clinic is one of the premier dental clinics in Islamabad, with 8+ experienced dentists and two modern dental offices, providing complete care for patients of all ages." />
         <meta name="twitter:image" content="https://oradentdentalclinic.com/images/oraLogo.webp" />
       </Head>
-      <Carousel />
-      {/* <WorkingHours /> */}
+         <div className='relative'>
+    <Carousel />
+     <div className="sm:absolute w-full bottom-[-40px] sm:bottom-[-90px]">
+        <OnlinePaymentSection />
+      </div>
+    </div>
       <AboutI8Branch />
       <WhyChooseOradent />
-      {/* <SmileSection />
-       <About /> */}
       <DentalServices />
       <Testimonial />
-      <SocialReviewsSection />
       <DentistTeam />
       <WhatsappButton />
       <CallButton />
       <AppointmentSection />
-      {/* <FAQSection /> */}
         <FAQSection
               faqs={faqs}
               title="Frequently Asked Questions"

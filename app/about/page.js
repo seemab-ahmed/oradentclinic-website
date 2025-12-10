@@ -1,11 +1,9 @@
-import About from '@/component/About'
 import AboutI8Branch from '@/component/AboutI8Branch'
 import AppointmentSection from '@/component/AppointmentSection'
 import CallButton from '@/component/CallButton'
 import Carousel from '@/component/Carousel'
 import FAQSection from '@/component/FaqSection'
 import WhatsappButton from '@/component/Whatsapp'
-import SocialReviewsSection from '@/component/socialReviewsSection '
 import React from 'react'
 
 const page = () => {
@@ -65,7 +63,6 @@ const page = () => {
     <>
     <Carousel />
       <AboutI8Branch/>
-      <SocialReviewsSection/>
       <AppointmentSection/>
           <FAQSection
                     faqs={faqs}

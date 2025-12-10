@@ -44,7 +44,7 @@ const OnlinePaymentSection = () => {
               <span className="font-medium">Mon - Sat:</span> 11:00 AM - 09:30 PM
             </p>
             <p className="text-sm md:text-base text-white sm:text-black text-center">
-              <span className="font-medium pr-3.5">Sunday:</span> 04:00 PM - 09:30 PM
+              <span className="font-medium pr-3.5">Sunday:</span> 03:00 PM - 09:30 PM
             </p>
           </div>
         </div>

@@ -79,7 +79,6 @@ const Carousel = () => {
           >
             Mon - Fri (11:00am - 9:30pm) — Saturday (11:00am - 09:30pm) — Sunday (02:00pm - 9:30pm) 
             &nbsp; | &nbsp; We Opened a New Branch At F-8 Islamabad 
-           
           </marquee>
         </div>
 
@@ -99,9 +98,16 @@ const Carousel = () => {
 
               {/* Text content */}
               <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-4">
-                <h1 className="text-[1.3rem] md:text-[3rem] lg:text-[4rem] font-black mt-6 sm:mt-2 font-jost leading-snug w-[368px] md:w-5xl">
-                  {slide.title}
-                </h1>
+                {index === 1 ? ( // ✅ first real slide gets <h1>
+                  <h1 className="text-[1.3rem] md:text-[3rem] lg:text-[4rem] font-black mt-6 sm:mt-2 font-jost leading-snug w-[368px] md:w-5xl">
+                    {slide.title}
+                  </h1>
+                ) : (
+                  <h2 className="text-[1.3rem] md:text-[3rem] lg:text-[4rem] font-black mt-6 sm:mt-2 font-jost leading-snug w-[368px] md:w-5xl">
+                    {slide.title}
+                  </h2>
+                )}
+
                 <p className="mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl font-light text-gray-200 leading-relaxed">
                   {slide.disc}
                 </p>
@@ -123,25 +129,6 @@ const Carousel = () => {
             </div>
           ))}
         </div>
-
-        {/* Indicators */}
-        {/* <div className="absolute z-30 flex -translate-x-1/2 bottom-2 sm:bottom-20 left-1/2 space-x-3">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrent(index + 1)}
-              className={`w-3 h-3 rounded-full ${
-                current === index + 1 ? "bg-blue-500" : "bg-gray-300"
-              }`}
-              aria-label={`Slide ${index + 1}`}
-            />
-          ))}
-        </div> */}
-      </div>
-
-      {/* Payment Section */}
-      <div className="sm:absolute w-full bottom-[-40px] sm:bottom-[-90px]">
-        <OnlinePaymentSection />
       </div>
     </div>
   );

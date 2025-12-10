@@ -23,9 +23,9 @@ const Header = () => {
     { name: 'Home', path: '/' },
     {
       name: 'Our Locations', path: '/',
-      submenu: [
+        submenu: [
         { name: 'I-8 Branch ', path: '/' },
-        { name: 'F-8 Branch ', path: 'f8Branch' }
+        { name: 'F-8 Branch ', path: '/dental-clinic-f8-markaz-islamabad' }
       ]
     },
     {

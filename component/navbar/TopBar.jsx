@@ -82,17 +82,6 @@ export default function TopBar() {
               </span>
             </Link>
           </div>
-
-          {/* Phone */}
-          {/* <div className="flex items-center space-x-2">
-            <Image
-              src={PhoneIcon}
-              alt="Phone Icon"
-              width={16}
-              height={16}
-            />
-            <span className="text-sm">+923249134745</span>
-          </div> */}
         </div>
       </div>
     </div>

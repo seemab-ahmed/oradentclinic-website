@@ -18,7 +18,7 @@ const AppointmentSection = () => {
       <div className="absolute inset-0 z-0 bg-[#091e3e] opacity-80"></div>
 
       {/* Content Layer */}
-      <div className="relative z-10 py-4 sm:py-14 container w-full max-w-[1400px] lg:max-w-[1337px] mx-auto px-4">
+      <div className="relative z-10 py-4 sm:py-14 container w-full max-w-[1400px] lg:max-w-[1337px] mx-auto px-4 lg:px-6">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Left Column */}
           <div

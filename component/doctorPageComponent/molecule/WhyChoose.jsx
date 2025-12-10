@@ -2,7 +2,7 @@
 
 export default function WhyChoose({ title, intro, features }) {
   return (
-    <section className="py-16 px-6 bg-gray-50 text-center font-sans">
+    <section className="py-16 px-4 ms:px-6 bg-gray-50 text-center font-sans">
       <div className="max-w-[1200px] mx-auto">
         {/* Title */}
         <h2 data-aos="fade-down" className="text-[1.5rem] md:text-[2rem] lg:text-[3rem] font-bold font-jost leading-snug text-[#091e3e] aos-init aos-animate">

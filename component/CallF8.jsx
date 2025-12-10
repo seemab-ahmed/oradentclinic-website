@@ -7,8 +7,6 @@ const CallF8 = () => {
 
   const handleClick = () => {
     setClicked(true);
-    // Optional: add timeout to reset
-    // setTimeout(() => setClicked(false), 2000);
   };
 
   return (

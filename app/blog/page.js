@@ -2,7 +2,6 @@ import BlogMain from '@/component/BlogMain';
 import BlogListing from '@/component/blogs/BlogListing';
 import CallButton from '@/component/CallButton';
 import BlogsData from '@/component/data/blogs';
-import FAQSection from '@/component/FaqSection';
 import WhatsappButton from '@/component/Whatsapp';
 
 export default function BlogPage() {

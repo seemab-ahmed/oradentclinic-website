@@ -3,21 +3,8 @@ import "./globals.css";
 import Header from "@/component/navbar/Header";
 import Footer from "@/component/footer";
 import TopBar from "@/component/navbar/TopBar";
-import Carousel from "@/component/Carousel";
-import CallButton from "@/component/CallButton";
-import WhatsappButton from "@/component/Whatsapp";
 import AOSWrapper from "@/component/AOSWrapper";
-
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import GoogleReview from '@/component/GoogleReview';
 
 const jost = Jost({
   variable: "--font-jost",
@@ -48,8 +35,8 @@ export default function RootLayout({ children }) {
         <AOSWrapper>
           <TopBar />
           <Header />
-          {/* <Carousel /> */}
           {children}
+          <GoogleReview />
           <Footer />
         </AOSWrapper>
 

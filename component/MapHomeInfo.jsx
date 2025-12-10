@@ -27,8 +27,8 @@ export const MapHomeInfov = () => {
   ];
 
   return (
-    <div className="w-full py-10 sm:bg-[#f9fcff]">
-        <h2 className='text-[1.5rem] md:text-[2rem] mt-4 mb-4 lg:text-[3rem] text-center font-bold font-jost leading-snug text-[#091e3e] aos-init aos-animate px-2'>Our Dental Clinics in Islamabad</h2>
+    <div className="w-full py-10 sm:bg-[#f9fcff] px-2 lg:px-3">
+        <h2 className='text-[1.5rem] md:text-[2rem] mt-4 mb-4 lg:text-[3rem] text-center font-bold font-jost leading-snug text-[#091e3e] aos-init aos-animate'>Our Dental Clinics in Islamabad</h2>
         <p className='text-center text-base sm:text-lg w-full max-w-5xl mx-auto mb-12 text-gray-700 px-4'>We are proud to serve patients across Islamabad with two convenient locations. Both of our clinics are fully equipped and offer the same quality care, advanced treatments, and a friendly environment to make your dental visits comfortable</p>
         
       <div className="max-w-[1400px] mx-auto px-0 sm:px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -31,9 +31,9 @@ const DentistCard = ({ name, qualifications, image, href }) => {
         {/* clickable doctor name */}
         {href ? (
           <Link href={href} onClick={handleNameClick}>
-            <h4 className="font-semibold mb-2 text-[1rem] sm:text-[1.2rem] text-[#075791] hover:text-[#85c441] cursor-pointer">
+            <h3 className="font-semibold mb-2 text-[1rem] sm:text-[1.2rem] text-[#075791] hover:text-[#85c441] cursor-pointer">
               {name}
-            </h4>
+            </h3>
           </Link>
         ) : (
           <h4 className="font-semibold mb-2 text-[1rem] sm:text-[1.2rem] text-[#075791] hover:text-[#85c441]">

@@ -45,18 +45,6 @@ export default function AboutFBranch() {
             </div>
           </div>
         </div>
-
-        {/* Optional appointment button */}
-        {/* 
-        <div className="mt-8">
-          <a
-            href="/appointment"
-            className="inline-block px-6 py-3 text-white bg-primary hover:bg-blue-700 rounded-md transition"
-          >
-            Make Appointment
-          </a>
-        </div> 
-        */}
       </div>
     </section>
   );

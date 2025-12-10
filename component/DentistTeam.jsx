@@ -94,8 +94,8 @@ const dentists = [
 
 const DentistTeam = () => {
   return (
-    <div className="py-10 bg-white">
-      <div className="mx-auto px-4 max-w-[1400px]">
+    <div className="pb-10 px-4 lg:px-6 v  pt-16 md:pt-26 bg-white">
+      <div className="mx-auto max-w-[1400px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Title Section */}
           <div

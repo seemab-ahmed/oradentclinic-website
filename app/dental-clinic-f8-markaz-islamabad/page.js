@@ -1,17 +1,12 @@
-import About from '@/component/About'
-import AboutFBranch from '@/component/AboutFBranch'
 import AboutI8Branch from '@/component/AboutI8Branch'
-import AppointmentSection from '@/component/AppointmentSection'
 import CallF8 from '@/component/CallF8'
 import Carousel from '@/component/Carousel'
-import DentistTeam from '@/component/DentistTeam'
 import F8AppoinmentSection from '@/component/F8AppoinmentSection'
+import F8ContactInfo from '@/component/F8ContactInfo'
 import F8DentistTeam from '@/component/F8DentistTeam'
-import { F8Map } from '@/component/F8Map'
-import MapFBranch from '@/component/MapFBranch'
+import F8ContactSection, { F8Map } from '@/component/F8Map'
+import F8TimingSection from '@/component/F8TimingSection'
 import OnlinePaymentSection from '@/component/OnlinePaymentSection'
-import ServiceFBranch from '@/component/ServicesFBranch'
-import SocialReviewsSection from '@/component/socialReviewsSection '
 import Testimonial from '@/component/Testimonial'
 import WhatsAppF8 from '@/component/WhatAppF8'
 import React from 'react'
@@ -20,18 +15,15 @@ const page = () => {
   return (
     <>
     <Carousel />
-    {/* <MapFBranch/> */}
-    {/* <AboutFBranch/> */}
+    <F8TimingSection/>
+    <F8ContactInfo/>
     <AboutI8Branch/>
-    <F8AppoinmentSection/>
-    {/* <ServiceFBranch/> */}
     <F8DentistTeam/>
-    <SocialReviewsSection/>
-    <F8Map/>
+    <F8AppoinmentSection/>
+    <F8ContactSection/>
     <WhatsAppF8/>
     <CallF8/>
     <Testimonial/>
-     {/* <OnlinePaymentSection/>  */}
     </>
   )
 }

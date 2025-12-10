@@ -5,7 +5,7 @@ import BariaImg from "@/public/images/dentist/bariya.webp"
 
 export default function DrBariaAbout() {
   return (
-    <section className="py-6 sm:py-16 px-6 bg-gray-50 font-sans">
+    <section className="py-6 sm:py-16 px-4 md:px-6 bg-gray-50 font-sans">
       <div className="max-w-[1300px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         
         {/* Left Side: Text */}

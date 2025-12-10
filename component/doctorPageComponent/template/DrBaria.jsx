@@ -73,10 +73,6 @@ export function DrBaria() {
       image: "images/testimonials/usericon.webp",
     },
   ];
-  //   const faqs = [
-  //   { question: "What is React?", answer: "React is a UI library by Facebook." },
-  //   { question: "Is it free?", answer: "Yes, React is open-source and free." },
-  // ];
   const faqs = [
     {
       question: "Who is Dr. Baria Zareef?",
@@ -141,11 +137,6 @@ export function DrBaria() {
         intro="Choosing the right dentist can make a big difference for your smile and comfort. Dr. Baria Zareef is known for her gentle and caring approach."
         features={features}
       />
-      <FAQSection
-        faqs={faqs}
-        title="Frequently Asked Questions"
-        subtitle="Quick answers to common queries"
-      />
       <DrCertificates
         title="Certificates & Achievements"
         subtitle="Recognitions and Certifications Earned by Dr. Baria Zareef"
@@ -155,6 +146,11 @@ export function DrBaria() {
         title="What Patients Say About Dr. Baria Zareef"
         background={ReviewBg.src}
         testimonials={drBariaTestimonials}
+      />
+      <FAQSection
+        faqs={faqs}
+        title="Frequently Asked Questions"
+        subtitle="Quick answers to common queries"
       />
       <CallButton />
       <WhatsappButton />

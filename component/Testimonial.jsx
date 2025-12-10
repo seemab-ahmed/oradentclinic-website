@@ -11,37 +11,52 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "Niamat Ullah Khan",
-    text: `I am getting my root canal treatment from Dr kaynaat.i am very satisfied with the treatment.the clinic is very well maintained and hygiene.i would highly recommend to visit oradent dental clinic.
-"Recommend 10/10`,
-    image: NiamatImg.src, // Extract the path for img tag
-  },
-  {
-    name: "Aisam Ul Haq",
-    text: `I had an amazing experience at oradent dental clinic From the moment I walked in, the staff are welcoimg and made me feel comfortable.The receptionist were friendly and efficient, and i didn't have to wait long for my appointment. `,
+    name: "Adna Malik",
+    text: `Getting braces from Dr. Maryam Hafeez, fully satisfied. Excellent way of explaining and working, highly recommend.`,
     image: "https://oradentdentalclinic.com/frontend/img/user.webp",
   },
   {
-    name: "valeed kamal",
-    text: `Had a root canal, scaling, filling done at Oradent Clinic by Dr. Kainaat, and it was smooth sailing! Dr. Kainaat’s expertise and care made the entire process virtually pain-free. Friendly staff, clean environment—couldn’t ask for a better dental experience. Highly recommend! 🌟🌟🌟🌟🌟`,
+    name: "Ehsaan",
+    text: `Dr. Maryum is not only very skilled but also highly professional in her work. I felt completely comfortable during my treatment, and everything was explained in a clear and caring way. The clinic is clean, well-managed, and the staff is friendly. I had a wonderful experience here and would strongly recommend Dr. Maryum’s clinic to anyone looking for quality dental care.`,
     image: "https://oradentdentalclinic.com/frontend/img/user.webp",
   },
   {
-    name: "MINAHIL FATIMA",
-    text: `I recently had my dental scaling and polishing done at Oradent by Dr. Baria Zareef, and it was a fantastic experience! The procedure was smooth and painless, making it surprisingly comfortable. Dr. Baria’s excellent communication put me at ease, and her attention to detail was impressive. Highly recommend Oradent for anyone looking for quality dental care!`,
+    name: "Syed Waliullah Shah",
+    text: `Oradent Dental Clinic has one of the best teams for dental treatments, with very humble and welcoming staff. The clinic is neat, clean, and gives great importance to hygiene and sterilization. Each treatment is handled by specialists with professional care. I am fully satisfied with the services and highly recommend this clinic in Islamabad.`,
     image: "https://oradentdentalclinic.com/frontend/img/user.webp",
   },
   {
-    name: "Muhammad Sajid",
-    text: `My Experience was very good and staff was very polite and doctor Iqra Khan was very humble towards me .. I have done my teeth scaling and polishing .. in that procedure there was no pain but a little itching and little pain but that pain was bare able.. best experience and feeling confident .. thank you Oradent clinic and Dr. Iqra Khan`,
+    name: "Mehwash Alam",
+    text: `I recently had my scaling and polishing done at Oradent F8 Islamabad. The doctor there, Dr. Zainab, was very professional and attentive. I had my teeth cleaned in a very relaxed and unhurried manner. The equipment and clinic looked very hygienic. I will definitely rate it ⭐⭐⭐⭐⭐ and will visit them again for my next scaling session.`,
     image: "https://oradentdentalclinic.com/frontend/img/user.webp",
   },
   {
-    name: "jonilyna ombayan",
-    text: `I was so nervous about going to the dentist, but this clinic made it a pleasant experience. The staff is wonderful, and the dentist is incredibly skilled. Thanks to Dr. Kaynaat Zamir 💕 You helped me with a long-standing dental issue, and I am so grateful for expertise and care. Highly recommended dentist 🦷 ⭐⭐⭐⭐⭐ Salamat 💘`,
+    name: "S. Batool (Batool)",
+    text: `I had a wonderful experience at Oradent Dental Clinic F-8 Markaz, Islamabad. At first, I was a bit anxious, but Dr. Mukammil Shah made the whole process so smooth. He is not only a skilled dentist but also very kind and patient. He explained everything about the crown procedure clearly, and to my surprise, the treatment was completely pain-free.`,
+    image: "https://oradentdentalclinic.com/frontend/img/user.webp",
+  },
+  {
+    name: "Foqia Shah",
+    text: `Oradent clinic is great, I got my teeth cleaned from Dr. Zainab and she was amazing. The clinic is very clean, and I will be visiting again.`,
+    image: "https://oradentdentalclinic.com/frontend/img/user.webp",
+  },
+  {
+    name: "Wasif Saad",
+    text: `If you're looking for a dentist who is professional, knowledgeable, and truly cares about patient comfort and safety, I highly recommend Dr. Sohaib Mansoor. Definitely one of the best experiences I’ve had at an Oradent Dental Clinic.`,
+    image: "https://oradentdentalclinic.com/frontend/img/user.webp",
+  },
+  {
+    name: "Hira Shafi",
+    text: `I visited OraDent Dental clinic for root canal treatment. Dr. Kaynaat performed the procedure. She took the time to explain every step of the process, ensuring I felt comfortable throughout. I highly recommend Dr. Kaynaat Zamir.`,
+    image: "https://oradentdentalclinic.com/frontend/img/user.webp",
+  },
+  {
+    name: "Haddi",
+    text: `I had a great experience at OraDent Dental Clinic for my wisdom tooth extraction. The staff was friendly and professional, and the procedure was quick and nearly painless. Dr. Shoaib Mansoor made me feel at ease and explained everything clearly. The aftercare was excellent, and my recovery was smooth.`,
     image: "https://oradentdentalclinic.com/frontend/img/user.webp",
   },
 ];
+
 
 const Testimonial = () => {
   return (

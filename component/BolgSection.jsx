@@ -49,8 +49,8 @@ const BlogSection = () => {
   }, [activeTag]);
 
   return (
-    <section className="pt-4 sm:py-12 bg-white w-full mt-0 lg:mt-16">
-      <div className="container w-full max-w-[1400px] lg:max-w-[1337px] mx-auto px-4">
+    <section className="pt-4 sm:py-12 bg-white w-full mt-0 lg:mt-16 px-4 lg:px-6">
+      <div className="container w-full max-w-[1400px] lg:max-w-[1337px] mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-5 sm:mb-10 gap-3 sm:gap-6">
           <div data-aos="fade-up" className="max-w-2xl text-center md:text-left">
